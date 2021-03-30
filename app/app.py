@@ -6,13 +6,13 @@ from flask import Flask, Response
 app = Flask(__name__)
 
 
-def cities_import() -> List(Dict):
+def cities_import() -> List[Dict]:
     config = {
-        'user' = 'root',
-        'password' = 'root',
-        'host' = 'db',
-        'port' = '3306',
-        'database' = 'citiesData'
+        'user': 'root',
+        'password': 'root',
+        'host': 'db',
+        'port': '3306',
+        'database': 'citiesData'
     }
     connection = mysql.connector.connect(**config)
     cursor = connection.cursor(dictionary=True)
@@ -29,9 +29,9 @@ def cities_import() -> List(Dict):
 @app.route('/')
 def index() -> str:
     js = json.dumps(cities_import())
-    resp = Response(js, status = 200, mimetype = 'application/json')
+    resp = Response(js, status=200, mimetype='application/json')
     return resp
 
 
-if '__name__' == '__main__':
+if __name__ == '__main__':
     app.run(host='0.0.0.0')
