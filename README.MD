@@ -5,4 +5,4 @@ This project is a homework assignment to gain an understanding of getting PyChar
 ![postman request output](screenshots/Postman_Screenshot.png)
 
 # MySQL Data Screenshot:
-![pycharm data query](screenshots/Postman_Screenshot.png)
+![pycharm data query](screenshots/MySQL_Query.png)
